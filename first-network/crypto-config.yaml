@@ -12,7 +12,6 @@ OrdererOrgs:
   # ---------------------------------------------------------------------------
   - Name: Orderer
     Domain: example.com
-    EnableNodeOUs: true
     # ---------------------------------------------------------------------------
     # "Specs" - See PeerOrgs below for complete description
     # ---------------------------------------------------------------------------
@@ -21,7 +20,7 @@ OrdererOrgs:
       - Hostname: orderer2
       - Hostname: orderer3
       - Hostname: orderer4
-      - Hostname: orderer5
+    #  - Hostname: orderer5
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
@@ -68,7 +67,7 @@ PeerOrgs:
     # ---------------------------------------------------------------------------
     Template:
       Count: 2
-      # Start: 5
+      # Start: 4
       # Hostname: {{.Prefix}}{{.Index}} # default
     # ---------------------------------------------------------------------------
     # "Users"
